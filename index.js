@@ -28,6 +28,7 @@ const Slider = (
     renderNotch,
     renderRail,
     renderRailSelected,
+    hightCustomStyles,
     ...restProps
   }
 ) => {
@@ -191,7 +192,7 @@ const Slider = (
           {lowThumb}
         </Animated.View>
         {
-          !disableRange && <Animated.View style={highStyles}>
+          !disableRange && <Animated.View style={[highStyles, hightCustomStyles]}>
             {highThumb}
           </Animated.View>
         }
